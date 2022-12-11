@@ -10,7 +10,7 @@ To compare this procedure with other existing strategies, a convolutional autoen
 
 <img width="500" alt="epoch29" src="https://user-images.githubusercontent.com/56418155/206883314-1adc2da2-e1d8-4e5d-a53d-a4e9634ca1ed.png">
 
-During the experiments the NATOS dataset is used, which contains body sensor recordings of gestures used as aircraft handling signals [[2]](#2).
+During the experiments the NATOPS dataset is used, which contains body sensor recordings of gestures used as aircraft handling signals [[2]](#2).
 http://groups.csail.mit.edu/mug/natops/
 
 ## References
