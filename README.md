@@ -8,7 +8,7 @@ Transformer models follow the Encoder-Decoder principle, where the Encoder proje
 
 To compare this procedure with other existing strategies, a convolutional autoencoder is implemented based on multiple convolutional layers with different numbers of kernels and kernel sizes. [[1]](#1).
 
-<img alt="epoch29" src="https://user-images.githubusercontent.com/56418155/206883314-1adc2da2-e1d8-4e5d-a53d-a4e9634ca1ed.png">
+<img width="500" alt="epoch29" src="https://user-images.githubusercontent.com/56418155/206883314-1adc2da2-e1d8-4e5d-a53d-a4e9634ca1ed.png">
 
 ## References
 <a id="1">[1]</a> 
