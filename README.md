@@ -10,8 +10,15 @@ To compare this procedure with other existing strategies, a convolutional autoen
 
 <img width="500" alt="epoch29" src="https://user-images.githubusercontent.com/56418155/206883314-1adc2da2-e1d8-4e5d-a53d-a4e9634ca1ed.png">
 
+During the experiments the NATOS dataset is used, which contains body sensor recordings of gestures used as aircraft handling signals. [[2]](#2).
+
 ## References
 <a id="1">[1]</a> 
 R. Guidotti et al. (2020). 
-Explaining Any Time Series Classifier.
-IEEE Second International Conference on Cognitive Machine Intelligence (CogMI)
+"Explaining Any Time Series Classifier."
+In IEEE Second International Conference on Cognitive Machine Intelligence (CogMI)
+
+<a id="2">[2]</a> 
+Yale Song, David Demirdjian, and Randall Davis (2011).
+"Tracking Body and Hands For Gesture Recognition: NATOPS Aircraft Handling Signals Database."
+In Proceedings of the 9th IEEE International Conference on Automatic Face and Gesture Recognition, Santa Barbara.
