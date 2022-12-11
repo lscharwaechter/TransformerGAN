@@ -6,11 +6,11 @@ This project aims to foster the usage of transformer architectures as autoencode
 
 Transformer models follow the Encoder-Decoder principle, where the Encoder projects the input time series into a meaningful memory. In this project, a subsequent feed-forward-network then serves as a compressed latent space of the memory, which gives more control about the most important, latent features. Using this compressed memory, the Decoder learns to reconstruct the original time series. Thereby, the compressed memory latent space is shaped during training using a GAN-principle: A Generator samples a random point from the compressed latent space and constructs a time series using the Transformer-Decoder. A Discriminator then decides if a given time series is real (from the dataset) or not. This procedure shifts random points from the latent space near to the true distribution of the given dataset, such that plausible interpolations between learned representations can be sampled.
 
-To compare this procedure with other existing strategies, a convolutional autoencoder is implemented based on multiple convolutional layers with different numbers of kernels and kernel sizes. [[1]](#1).
+To compare this procedure with other existing strategies, a convolutional autoencoder is implemented based on multiple convolutional layers with different numbers of kernels and kernel sizes [[1]](#1).
 
 <img width="500" alt="epoch29" src="https://user-images.githubusercontent.com/56418155/206883314-1adc2da2-e1d8-4e5d-a53d-a4e9634ca1ed.png">
 
-During the experiments the NATOS dataset is used, which contains body sensor recordings of gestures used as aircraft handling signals. [[2]](#2).
+During the experiments the NATOS dataset is used, which contains body sensor recordings of gestures used as aircraft handling signals [[2]](#2).
 http://groups.csail.mit.edu/mug/natops/
 
 ## References
