@@ -86,6 +86,3 @@ for _, values in enumerate(fake_data.T):
     H_E += 1/H_max * entropy
 H = H_E/num_src_variables
 print(H)
-#transGAN: 0.3664
-#transWGAN: 0.3503
-
