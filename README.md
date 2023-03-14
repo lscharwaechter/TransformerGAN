@@ -8,7 +8,8 @@ Transformer models follow the Encoder-Decoder principle, where the Encoder proje
 
 To compare this procedure with other existing strategies, a convolutional autoencoder network is implemented based on multiple convolutional layers with different numbers of kernels and kernel sizes [[1]](#1).
 
-<img width="500" alt="epoch29" src="https://user-images.githubusercontent.com/56418155/206883314-1adc2da2-e1d8-4e5d-a53d-a4e9634ca1ed.png">
+<img width="576" alt="TransWGAN_timeseries" src="https://user-images.githubusercontent.com/56418155/224870920-0a66794a-a6c0-40e1-9f43-6620c59a54fa.png">
+Different examples of multivariate time series that the transformer network generated after Wasserstein GAN regularization.
 
 During the experiments the NATOPS dataset is used, which contains body sensor recordings of gestures used as aircraft handling signals [[2]](#2).
 http://groups.csail.mit.edu/mug/natops/
