@@ -33,7 +33,7 @@ model_name = 'elliot'
 d_model = 24
 d_latent = 60
 ffn_hidden_dim = 128
-nhead = 1
+nhead = 8
 num_encoder_layers = 6
 num_decoder_layers = 6
 
