@@ -188,7 +188,7 @@ class Discriminator(nn.Module):
         x = self.conv9_enc(x)
         x = self.dense_enc(x)
         x = self.dense_one(x)
-        #x = self.sigmoid(x)
+        x = self.sigmoid(x) # needs to be removed for Wasserstein GAN training
         return x
         
     def forward(self, src_input: Tensor):
