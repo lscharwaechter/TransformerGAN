@@ -11,7 +11,6 @@ import numpy as np
 import math
 
 DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-DEVICE = torch.device('cpu')
 
 class VarSeriesEmbedding(nn.Module):
     '''
