@@ -22,10 +22,8 @@ from random import sample
 
 from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
-from dtaidistance import dtw_ndim, dtw
-from statsmodels.tsa.stattools import coint
 
-torch.manual_seed(5)
+torch.manual_seed(0)
 
 # Get dataset
 maxlen = 52
@@ -134,25 +132,3 @@ plt.scatter(X_tSNE[:,0],X_tSNE[:,1],s=200,alpha=0.5,c=test_labels,cmap=cmap)
 plt.xticks([], [])
 plt.yticks([], [])
 '''
-#%%
-'''
-# Plot first and 2nd PCA
-
-#X = test_data
-pca = PCA(n_components=2)
-
-X = pca.fit_transform(X)
-X = np.float16(X)
-
-plt.figure(1,figsize=(16,10))
-cmap = plt.cm.get_cmap('tab10', 2)
-plt.scatter(X[:,0],X[:,1],s=150,alpha=0.5,c=labels,cmap=cmap)
-'''
-
-# %%
-
-# Calculate Engle-Granger two-step cointegration test
-# Cointegration vs Correlation, Group comparison? multivariate?
-
-#results = coint(test_data[0], noise_data[0])
-#print(results)
