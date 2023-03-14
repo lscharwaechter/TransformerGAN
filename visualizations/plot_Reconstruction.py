@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 @author: Leon Scharwächter
-
-Recommended inline plot size (12, 4) inches
 """
 
 import torch
