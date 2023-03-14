@@ -44,10 +44,6 @@ test_data = test_data.reshape((test_data.shape[0],
                            	test_data.shape[1]*test_data.shape[2]))
 test_data = np.float16(test_data)
 
-#data_test = arff.loadarff('NATOPS_TEST.arff')
-#df_test = pd.DataFrame(data_test[0])
-#labels = df_test['classAttribute'].sort_values().unique()
-
 #%%
 
 # Load the model and sample artificial data points
