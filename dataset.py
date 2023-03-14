@@ -40,19 +40,7 @@ def getDataset(seqlen: int = 51, SOS: int = np.nan, EOS: int = np.nan):
 
     # Convert the dataset
     nData = df_train.shape[0] # 180
-    nFeatures = df_train.iloc[0][0].shape[0] # 24
-    
-    #if SOS is not np.nan:
-     #   if seqlen == 51:
-      #      sequenceLength = len(df_train.iloc[0][0][0])+1 # 51+SOS
-       # else:
-        #    sequenceLength = seqlen+1
-    #else:
-     #   if seqlen == 51:
-      #      sequenceLength = len(df_train.iloc[0][0][0])
-       # else:
-        #    sequenceLength = seqlen
-        
+    nFeatures = df_train.iloc[0][0].shape[0] # 24        
     sequenceLength = seqlen
     train_data = np.zeros((nData, sequenceLength, nFeatures))
     test_data = np.zeros((nData, sequenceLength, nFeatures))
@@ -64,21 +52,7 @@ def getDataset(seqlen: int = 51, SOS: int = np.nan, EOS: int = np.nan):
     for i, row in df_test.iterrows():
         for f in range(nFeatures): 
             test_data[i,:,f] = list(row.iloc[0][f])
-          
-    #for i, row in df_train.iterrows():
-     #   for f in range(nFeatures):
-      #      if SOS is not np.nan:
-       #         train_data[i,:,f] = np.concatenate((SOS,list(row.iloc[0][f])))
-        #    else:
-         #       train_data[i,:,f] = list(row.iloc[0][f])
-     
-    #for i, row in df_test.iterrows():
-     #   for f in range(nFeatures): 
-      #      if SOS is not np.nan:
-       #         test_data[i,:,f] = np.concatenate((SOS,list(row.iloc[0][f])))
-        #    else:
-         #       test_data[i,:,f] = list(row.iloc[0][f])
-                        
+                               
     # Convert into Torch Tensor
     train_data = torch.from_numpy(train_data)
     test_data = torch.from_numpy(test_data)
