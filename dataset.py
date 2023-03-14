@@ -153,23 +153,3 @@ def scale(dataset: float, SOS: int = np.nan, seqlen: int = 51):
 
 #train_labels, test_labels = getLabels()
 #train_data, test_data = getDataset()
-
-#plt.figure()
-#palette = sns.color_palette("tab10",24)
-#sns.lineplot(data=train_data[0,:,:], dashes=False, palette=palette, 
-#             legend=False, alpha=0.8)
-
-
-
-# Plot a comparison of an original timeseries from the batch
-# with the current autoencoder reconstruction
-#src_plt = scaler.inverse_transform(src_input[:,1:,:].detach().clone().numpy())
-#outs_plt = scaler.inverse_transform(outs_real[:,:-1,:].detach().clone().numpy())
-#fig, axes = plt.subplots(1,2)
-#palette = sns.color_palette("deep",24)
-#sns.lineplot(data=src_plt[0,:,:], dashes=False, palette=palette, 
-#             legend=False, ax=axes[0]).set(title='Original')
-#sns.lineplot(data=outs_plt[0,:,:], dashes=False, palette=palette, 
-#             legend=False, ax=axes[1]).set(title='Reconstruction')
-#fig.suptitle(f'Epoch Nr. {epoch}')
-#plt.show()
