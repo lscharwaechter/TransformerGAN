@@ -3,7 +3,7 @@
 """
 Created on Tue Jan 31 23:42:01 2023
 
-@author: ros
+@author: Leon Scharwächter
 """
 
 import numpy as np
@@ -23,7 +23,7 @@ train_DISC_real_errs = np.load('train_DISC_real_errs.npy')
 stats = np.load('stats.npy',allow_pickle=True)
 
 start_ = 0
-end_ = -1 #-1
+end_ = -1
 
 # Plot the errors
 plt.figure(1, figsize=(1,1))
@@ -62,10 +62,3 @@ plt.ylabel("Output")
 plt.show()
 
 print(stats)
-
-
-
-#plt.plot(train_AE_errs)
-#plt.plot(train_DISC_errs)
-#plt.plot(train_GEN_errs)
-#print(stats)
