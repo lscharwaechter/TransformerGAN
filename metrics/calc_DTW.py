@@ -2,7 +2,7 @@
 """
 Created on Sat Feb 11 15:43:01 2023
 
-@author: Leon
+@author: Leon Scharwächter
 """
 
 import dataset
