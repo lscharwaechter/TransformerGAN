@@ -10,18 +10,6 @@ import torch.nn.functional as F
 
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-''' 
--- Notes --
-Checkerboard effekt:
-Use a kernel size that is divided by the stride,
-avoiding the overlap issue.
-
-If not using ConvTranspose1d:
-each UpSampling2D layer must be followed by a Conv2D layer
-that will learn to interpret the doubled input and be trained
-to translate it into meaningful detail.
-'''
-
 class ConvolutionalAE(nn.Module):
     def __init__(self,
                  maxlen: int,
@@ -170,7 +158,7 @@ class Discriminator(nn.Module):
                                    padding=2, stride=1)
         
         # Last layers
-        self.dense_enc = nn.Linear(maxlen*num_variables, d_latent) #612 #1224 #4096
+        self.dense_enc = nn.Linear(maxlen*num_variables, d_latent)
         self.dense_one = nn.Linear(d_latent,1)
         self.sigmoid = nn.Sigmoid()
         
