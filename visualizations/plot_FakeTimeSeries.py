@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Feb 11 15:43:01 2023
-
-@author: Leon
+@author: Leon Scharwächter
 """
 
 import dataset
@@ -55,27 +53,16 @@ transformer.load_state_dict(
 
 # %%
 
-bz = 10
+bz = 10 # number of time series sequences to generate
 SOS = -3
-memory_fake = transformer.sample(bz)
-fake_data = transformer.greedy_decode_bz(memory_fake, maxlen, num_tgt_variables, SOS)
-fake_data = fake_data[:,1:,:].detach().numpy() #exclude <SOS>
+memory_fake = transformer.sample(bz) # sample randomly from latent space
+fake_data = transformer.greedy_decode_bz(memory_fake, maxlen, num_tgt_variables, SOS) # decode memories
+fake_data = fake_data[:,1:,:].detach().numpy() # exclude <SOS>
 
 # %%
 
 # Rescale
 fake_data = scaler.inverse_transform(fake_data)
-
-'''
-# Plot the figures
-for i in range(bz):
-    plt.figure(i, figsize=(1,1))
-    fig, ax1 = plt.subplots(1,1)
-    fig.subplots_adjust(hspace=0.5)
-    fig.suptitle(f'Example {i+1}')
-    ax1.plot(fake_data[i])
-    plt.show()
-'''
 
 # Create a figure with 10 subplots and 5 plots in two rows
 fig, axs = plt.subplots(nrows=2, ncols=5, figsize=(20, 6))
@@ -89,3 +76,14 @@ for i in range(len(axs)):
 plt.subplots_adjust(wspace=0.2, hspace=0.3)
 # Show the plot
 plt.show()
+
+'''
+# Plot the figures
+for i in range(bz):
+    plt.figure(i, figsize=(1,1))
+    fig, ax1 = plt.subplots(1,1)
+    fig.subplots_adjust(hspace=0.5)
+    fig.suptitle(f'Example {i+1}')
+    ax1.plot(fake_data[i])
+    plt.show()
+'''
