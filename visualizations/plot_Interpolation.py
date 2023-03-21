@@ -80,7 +80,7 @@ p2_memory = transformer.encode(p2)
 latent_points = interpolate_points(p1_memory, p2_memory, n_dim=d_latent, n_steps=n_steps)
 latent_points = torch.from_numpy(latent_points).type(torch.FloatTensor)
 
-# Decode memories of the latent points into time series signals
+# Decode memories / latent points into time series signals
 interpolated_timeseries = transformer.greedy_decode_bz(latent_points, maxlen, num_tgt_variables, SOS)
 interpolated_timeseries = scaler.inverse_transform(interpolated_timeseries[:,1:,:].detach().numpy())
 interpolated_timeseries = torch.from_numpy(interpolated_timeseries).type(torch.FloatTensor)
