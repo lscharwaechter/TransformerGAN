@@ -1,5 +1,7 @@
 # TransformerGAN
 
+See [report.pdf](report.pdf) for a full text.
+
 ## About
 
 This is a project that aims to foster the usage of Transformer architectures as autoencoders for multivariate time series. The goal is to enable generative sampling processes to create artificial, but plausible time series signals. These artificial signals can then for example serve to broaden datasets or to represent local neighborhoods of a certain time series signal. A specific use case lies in the field of explainable machine learning, in which a local neighborhood for a time series input query is sampled to construct a new dataset of similar signals. If some of these signals activate another class in a blackbox decision making system, minimal changes of the original time series that cause another classification result can be revealed (counterfactual explanations). 
