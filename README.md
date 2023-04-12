@@ -10,7 +10,11 @@ During the experiments the NATOPS dataset is used, which contains body sensor re
 http://groups.csail.mit.edu/mug/natops/
 
 <img width="700" alt="TransWGAN_timeseries" src="https://user-images.githubusercontent.com/56418155/224870920-0a66794a-a6c0-40e1-9f43-6620c59a54fa.png">
-The above figure shows different examples of multivariate time series that the transformer network generated after Wasserstein-GAN regularization.
+The above figure shows different examples of multivariate time series that the transformer network generated after Wasserstein-GAN regularization. The figure below shows real data samples from the dataset. A high similarity score between both distributions could be measured using Dynamic Time Warping, however, high frequency fluctuations could not be diminished yet.
+<br>
+<br>
+<img width="700" alt="NATOPS_timeseries" src="https://user-images.githubusercontent.com/56418155/231580800-56624c42-0e43-484b-89ee-a76f96e0e315.png">
+
 
 To compare this procedure with other existing strategies, a convolutional autoencoder network is implemented based on multiple convolutional layers with different numbers of kernels and kernel sizes [[2]](#2).
 
