@@ -1,6 +1,6 @@
 # TransformerGAN
 
-See [report.pdf](report.pdf) for a full text.
+See ... for a full text. [arXiv added soon]
 
 ## About
 
