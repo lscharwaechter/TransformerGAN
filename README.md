@@ -1,6 +1,6 @@
 # TransformerGAN
 
-See ... for a full text. [arXiv added soon]
+See [report](https://github.com/lscharwaechter/TransformerGAN/report.pdf) for the full text.
 
 ## About
 
