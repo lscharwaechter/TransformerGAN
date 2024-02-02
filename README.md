@@ -8,7 +8,7 @@ This work aims to foster the usage of Transformer architectures as autoencoders 
 
 Transformer models follow the Encoder-Decoder principle, where the Encoder projects the input time series into a meaningful memory. A subsequent feed-forward-network then serves as a compressed latent space of the memory, which gives more control about the most important, latent features. Using this compressed memory, the Decoder learns to reconstruct the original time series. Thereby, the compressed memory latent space is shaped during training using a GAN-principle: A Generator samples a random point from the compressed latent space and constructs a time series using the Transformer-Decoder. A Discriminator then decides if a given time series is real (from the dataset) or not. Optimizing this adversarial procedure shifts random points from the latent space near to the true distribution of the given dataset, such that plausible interpolations between learned representations can be sampled.
 <p align="center">
-<img src="https://github.com/lscharwaechter/TransformerGAN/assets/56418155/0d13372c-6c8a-4ec3-b8ae-076128dc3e3c" width="350"/>
+<img src="https://github.com/lscharwaechter/TransformerGAN/assets/56418155/0d13372c-6c8a-4ec3-b8ae-076128dc3e3c" width="300"/>
 </p>
 During the experiments the NATOPS dataset is used, which contains body sensor recordings of gestures used as aircraft handling signals [[1]](#1).
 http://groups.csail.mit.edu/mug/natops/
