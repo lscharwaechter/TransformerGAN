@@ -16,7 +16,7 @@ http://groups.csail.mit.edu/mug/natops/
 <br>
 <p align="center">
 <img width="700" alt="TransWGAN_timeseries" src="https://user-images.githubusercontent.com/56418155/224870920-0a66794a-a6c0-40e1-9f43-6620c59a54fa.png"></p>
-The above figure shows different examples of multivariate time series that the transformer network generated after Wasserstein-GAN regularization. The figure below shows real data samples from the dataset. A high similarity score between both distributions could be measured using Dynamic Time Warping, however, high frequency fluctuations could not be diminished yet.
+The above figure shows different examples of multivariate time series that the transformer network generated after Wasserstein-GAN regularization. The figure below shows real data samples from the dataset. A high similarity score between both distributions could be measured using Dynamic Time Warping, however, high frequency fluctuations are added by the model.
 <br>
 <br>
 <p align="center">
